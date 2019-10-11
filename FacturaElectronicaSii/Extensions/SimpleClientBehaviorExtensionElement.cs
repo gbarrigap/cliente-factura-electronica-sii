@@ -16,8 +16,8 @@ namespace FacturaElectronicaSii.Extensions
 
         protected override object CreateBehavior()
         {
-            // Create the  endpoint behavior that will insert the message  
-            // inspector into the client runtime  
+            // Create the  endpoint behavior that will insert the message
+            // inspector into the client runtime
             return new SimpleEndpointBehavior();
         }
     }
