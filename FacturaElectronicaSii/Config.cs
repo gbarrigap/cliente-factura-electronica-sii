@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Configuration;
+using System.Text;
 
 namespace FacturaElectronicaSii
 {
@@ -9,7 +9,9 @@ namespace FacturaElectronicaSii
         {
             get
             {
-                return Environment.GetEnvironmentVariable("CERT_PATH");
+                return Encoding.UTF8.GetString(
+                    Convert.FromBase64String(
+                        Environment.GetEnvironmentVariable("CERT_PATH")));
             }
         }
 
@@ -17,7 +19,9 @@ namespace FacturaElectronicaSii
         {
             get
             {
-                return Environment.GetEnvironmentVariable("CERT_PWD");
+                return Encoding.UTF8.GetString(
+                    Convert.FromBase64String(
+                        Environment.GetEnvironmentVariable("CERT_SECRET")));
             }
         }
     }

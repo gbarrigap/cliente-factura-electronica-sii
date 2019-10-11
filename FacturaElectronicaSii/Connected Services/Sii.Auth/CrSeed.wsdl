@@ -22,10 +22,6 @@
   <wsdl:message name="getVersionMayorRequest" />
   <wsdl:message name="getSeedRequest" />
   <wsdl:portType name="CrSeed">
-    <wsdl:operation name="getSeed">
-      <wsdl:input name="getSeedRequest" message="impl:getSeedRequest" />
-      <wsdl:output name="getSeedResponse" message="impl:getSeedResponse" />
-    </wsdl:operation>
     <wsdl:operation name="getVersionMayor">
       <wsdl:input name="getVersionMayorRequest" message="impl:getVersionMayorRequest" />
       <wsdl:output name="getVersionMayorResponse" message="impl:getVersionMayorResponse" />
@@ -38,6 +34,10 @@
       <wsdl:input name="getVersionPatchRequest" message="impl:getVersionPatchRequest" />
       <wsdl:output name="getVersionPatchResponse" message="impl:getVersionPatchResponse" />
     </wsdl:operation>
+    <wsdl:operation name="getSeed">
+      <wsdl:input name="getSeedRequest" message="impl:getSeedRequest" />
+      <wsdl:output name="getSeedResponse" message="impl:getSeedResponse" />
+    </wsdl:operation>
     <wsdl:operation name="getState">
       <wsdl:input name="getStateRequest" message="impl:getStateRequest" />
       <wsdl:output name="getStateResponse" message="impl:getStateResponse" />
@@ -45,15 +45,6 @@
   </wsdl:portType>
   <wsdl:binding name="CrSeedSoapBinding" type="impl:CrSeed">
     <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
-    <wsdl:operation name="getSeed">
-      <wsdlsoap:operation soapAction="" />
-      <wsdl:input name="getSeedRequest">
-        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </wsdl:input>
-      <wsdl:output name="getSeedResponse">
-        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="getVersionMayor">
       <wsdlsoap:operation soapAction="" />
       <wsdl:input name="getVersionMayorRequest">
@@ -78,6 +69,15 @@
         <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
       <wsdl:output name="getVersionPatchResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSeed">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getSeedRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getSeedResponse">
         <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>

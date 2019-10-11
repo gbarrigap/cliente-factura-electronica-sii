@@ -17,15 +17,6 @@ namespace FacturaElectronicaSii.Sii.Auth {
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="getSeedReturn")]
-        string getSeed();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="getSeedReturn")]
-        System.Threading.Tasks.Task<string> getSeedAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="getVersionMayorReturn")]
         string getVersionMayor();
         
@@ -50,6 +41,15 @@ namespace FacturaElectronicaSii.Sii.Auth {
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="getVersionPatchReturn")]
         System.Threading.Tasks.Task<string> getVersionPatchAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="getSeedReturn")]
+        string getSeed();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="getSeedReturn")]
+        System.Threading.Tasks.Task<string> getSeedAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
@@ -88,14 +88,6 @@ namespace FacturaElectronicaSii.Sii.Auth {
                 base(binding, remoteAddress) {
         }
         
-        public string getSeed() {
-            return base.Channel.getSeed();
-        }
-        
-        public System.Threading.Tasks.Task<string> getSeedAsync() {
-            return base.Channel.getSeedAsync();
-        }
-        
         public string getVersionMayor() {
             return base.Channel.getVersionMayor();
         }
@@ -118,6 +110,14 @@ namespace FacturaElectronicaSii.Sii.Auth {
         
         public System.Threading.Tasks.Task<string> getVersionPatchAsync() {
             return base.Channel.getVersionPatchAsync();
+        }
+        
+        public string getSeed() {
+            return base.Channel.getSeed();
+        }
+        
+        public System.Threading.Tasks.Task<string> getSeedAsync() {
+            return base.Channel.getSeedAsync();
         }
         
         public string getState() {

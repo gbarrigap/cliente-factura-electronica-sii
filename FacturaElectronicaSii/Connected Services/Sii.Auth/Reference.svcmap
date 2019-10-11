@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2c814a94-84d9-4e39-9117-154cb2dece17" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b44a9b9c-bd25-44b0-8f48-eed9ff1ef387" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,7 +22,7 @@
     <MetadataSource Address="https://maullin.sii.cl/DTEWS/CrSeed.jws?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CrSeed.wsdl" MetadataType="Wsdl" ID="1196a611-b0fa-4a57-9140-75db16b8de21" SourceId="1" SourceUrl="https://maullin.sii.cl/DTEWS/CrSeed.jws?WSDL" />
+    <MetadataFile FileName="CrSeed.wsdl" MetadataType="Wsdl" ID="9abdfc6f-c686-4990-993e-03e82347d676" SourceId="1" SourceUrl="https://maullin.sii.cl/DTEWS/CrSeed.jws?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

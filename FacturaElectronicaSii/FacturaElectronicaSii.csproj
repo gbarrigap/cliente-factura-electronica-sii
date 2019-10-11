@@ -36,8 +36,10 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,29 +49,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
-    <Compile Include="Connected Services\Sii.Authentication\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\Sii.Auth\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\ServiceAuthenticator.cs" />
+    <Compile Include="Extensions\SimpleBehaviorExtensionElement.cs" />
+    <Compile Include="Extensions\SimpleClientBehaviorExtensionElement.cs" />
+    <Compile Include="Extensions\SimpleClientMessageInspector.cs" />
+    <Compile Include="Extensions\SimpleEndpointBehavior.cs" />
+    <Compile Include="Extensions\SimpleMessageInspector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\Sii.Authentication\CrSeed.wsdl" />
     <None Include="Connected Services\Sii.Auth\CrSeed.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\Sii.Authentication\" />
     <WCFMetadataStorage Include="Connected Services\Sii.Auth\" />
   </ItemGroup>
   <ItemGroup>
@@ -80,18 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\Sii.Auth\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\Sii.Authentication\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\Sii.Authentication\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\Sii.Authentication\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
